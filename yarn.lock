@@ -1968,6 +1968,13 @@
     "@typescript-eslint/types" "4.8.1"
     eslint-visitor-keys "^2.0.0"
 
+"@vzmi/denali-react-beta@^1.0.18":
+  version "1.0.18"
+  resolved "https://registry.npm.vzbuilders.com:4443/npm-registry/api/npm/npm-registry/@vzmi/denali-react-beta/-/vzmi-denali-react-beta-1.0.18.tgz#a8422f5192bfc736c03144a7edb9791f415afd28"
+  integrity sha1-qEIvUZK/xzbAMUSn7bl5H0Fa/Sg=
+  dependencies:
+    classnames "2.2.6"
+
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"
@@ -3204,6 +3211,11 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
+
+classnames@2.2.6:
+  version "2.2.6"
+  resolved "https://registry.npm.vzbuilders.com:4443/npm-registry/api/npm/npm-registry/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
+  integrity sha1-Q5Nb/90pHzJtrQogUwmzjQD2UM4=
 
 clean-css@^4.2.3:
   version "4.2.3"
