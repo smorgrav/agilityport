@@ -4336,6 +4336,11 @@ delayed-stream@~1.0.0:
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
 
+denali-css@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npm.vzbuilders.com:4443/npm-registry/api/npm/npm-registry/denali-css/-/denali-css-2.1.0.tgz#cef5def062c1206be0316e79ea2b47601db6178f"
+  integrity sha1-zvXe8GLBIGvgMW556itHYB22F48=
+
 depd@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"

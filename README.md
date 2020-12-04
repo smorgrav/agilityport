@@ -32,7 +32,27 @@ smorgrav/agilityport
 * yarn [add\\|link] @vzmi/denali-react-beta
 
 If you develop denali-react locally you need to run 
-```npm run-script build``` to make changes visible to this or other 
+```yarn build``` to make changes visible to this or other 
 projects using the linked npm library.
+
+## Scaffolding the app
+Starting from scratch we have some setup todo. Some of these are just perferences others are
+given by the choise of technology and libraries. 
+
+### Install Denali
+The denali react library is only a convinience over the css framework. 
+So the css framework is a prerequisite.
+ 
+``` yarn add denali-css```
+
+Typically you import this at the top level e.g. App.tsx with
+
+```import denali-css/css/denali.css```
+
+### Install and configure firebase
+
+
+### Configure linting and best practices
+
 
 

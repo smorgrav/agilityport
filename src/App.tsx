@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import './App.css';
-import {DnBox} from "@vzmi/denali-react-beta";
+import {DnBox, DnNavbar} from "@vzmi/denali-react-beta";
 import firebase from "firebase/app";
 import "firebase/analytics";
 import "firebase/auth";
 import "firebase/firestore";
+import 'denali-css/css/denali.css'
 
 const firebaseConfig = {
     apiKey: "AIzaSyC9vycrGHx4t8MrhzwgEUG9MOKVkJI_00k",
@@ -19,17 +20,29 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
+  // Renable this when I have a skeleton of denali up and running
+   /*
+    db.collection("competitions").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            console.log("something3lse")
+            setCompetitions(old => ({...old, [doc.id]: doc.data()}))
+        });
+    })*/
+
 function App() {
     const [competitions, setCompetitions] = useState({})
 
-    db.collection("competitions").get().then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-            setCompetitions(old => ({...old, [doc.id]: doc.data()}))
-        });
-    })
-
   return (
-      <>{Object.entries(competitions).map(([id, data]) => (<DnBox key={id}>{JSON.stringify(data)}</DnBox>))}</>
+      <>
+          <DnNavbar>
+              <DnNavbar.Left>
+                <DnNavbar.Item>Header</DnNavbar.Item>
+              </DnNavbar.Left>
+          </DnNavbar>
+          <DnBox>
+            Hello
+          </DnBox>
+          </>
   );
 }
 
