@@ -32,19 +32,20 @@ const firebaseConfig = {
 
 function App() {
     const [competitions, setCompetitions] = useState({})
-
   return (
       <>
           <DnNavbar>
               <DnNavbar.Left>
                 <DnNavbar.Item>Left</DnNavbar.Item>
               </DnNavbar.Left>
+              <DnNavbar.Responsive>
               <DnNavbar.Center>
                   <DnNavbar.Item>Center</DnNavbar.Item>
               </DnNavbar.Center>
               <DnNavbar.Right>
                   <DnNavbar.Item>Right</DnNavbar.Item>
               </DnNavbar.Right>
+              </DnNavbar.Responsive>
           </DnNavbar>
           <DnBox>
             Hello
