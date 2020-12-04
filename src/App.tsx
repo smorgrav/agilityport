@@ -17,8 +17,8 @@ const firebaseConfig = {
     appId: "1:1059309145754:web:0b750cebbca8ed34619923",
     measurementId: "G-D0Y3VL0NE5"
 };
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
+//firebase.initializeApp(firebaseConfig);
+//const db = firebase.firestore();
 
   // Renable this when I have a skeleton of denali up and running
    /*
@@ -29,6 +29,7 @@ const db = firebase.firestore();
         });
     })*/
 
+
 function App() {
     const [competitions, setCompetitions] = useState({})
 
@@ -36,8 +37,14 @@ function App() {
       <>
           <DnNavbar>
               <DnNavbar.Left>
-                <DnNavbar.Item>Header</DnNavbar.Item>
+                <DnNavbar.Item>Left</DnNavbar.Item>
               </DnNavbar.Left>
+              <DnNavbar.Center>
+                  <DnNavbar.Item>Center</DnNavbar.Item>
+              </DnNavbar.Center>
+              <DnNavbar.Right>
+                  <DnNavbar.Item>Right</DnNavbar.Item>
+              </DnNavbar.Right>
           </DnNavbar>
           <DnBox>
             Hello
