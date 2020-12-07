@@ -21,10 +21,26 @@ git clone git@git.vzbuilders.com:denali-system-language/denali-react-beta.git
 yarn link
 ``` 
 
-At various points this app will use unpublished features from the denali-react-beta package. To be
-sure you are using the correct one - you should use the internal repo and the branch: 
+3. Use a personal fork to be able to contribute changes
 ```
-smorgrav/agilityport
+Fork git@git.vzbuilders.com:denali-system-language/denali-react-beta.git on github
+git clone git@git.vzbuilders.com:smorgrav/denali-react-beta.git (or whatever your fork is called)
+
+# If you already had cloned the original repo you can switch origin like this:
+
+git remote rename origin upstream
+git remote add origin git@git.vzbuilders.com:smorgrav/denali-react-beta.git #(the forked repo)
+git fetch origin
+git checkout -B master --track origin/master #(to track the new origin instead of upstream)
+git push origin
+
+yarn link
+```
+
+At various points this app will use unpublished features from the denali-react-beta package. To be
+sure you are using a version compatible with this repo - you should use the fork: 
+```
+git@git.vzbuilders.com:smorgrav/denali-react-beta.git
 ```
 
 # Starting from scratch
@@ -75,6 +91,6 @@ As a final touch, we setup this auto-fix on git stage:
 
 ```npx mrm lint-staged```
 
-This kind of forces the choosen style and best practices as far as is practical.
+This kind of forces the chosen style and best practices as far as is practical.
 
 
