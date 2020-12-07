@@ -44,8 +44,10 @@ git@git.vzbuilders.com:smorgrav/denali-react-beta.git
 ```
 
 # Starting from scratch
-* yarn create react-app agilityport --template typescript
-* yarn [add\\|link] @vzmi/denali-react-beta
+```
+yarn create react-app agilityport --template typescript
+yarn [add|link] @vzmi/denali-react-beta # See prerequisites for the add vs link option
+```
 
 If you develop denali-react locally you need to run 
 ```yarn build``` to make changes visible to this or other 
