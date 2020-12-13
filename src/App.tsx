@@ -1,42 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
-import {DnBox, DnNavbar} from '@vzmi/denali-react-beta';
-import firebase from 'firebase/app';
-import 'firebase/analytics';
-import 'firebase/auth';
-import 'firebase/firestore';
+import {DnNavbar} from '@vzmi/denali-react-beta';
 import 'denali-css/css/denali.css';
+import {FirebaseProvider} from './FirebaseProvider';
+import {CompetitionOverview} from './CompetitionOverivew';
 
-
-const firebaseConfig = {
-  apiKey: 'AIzaSyC9vycrGHx4t8MrhzwgEUG9MOKVkJI_00k',
-  authDomain: 'agilityport.firebaseapp.com',
-  databaseURL: 'https://agilityport.firebaseio.com',
-  projectId: 'agilityport',
-  storageBucket: 'agilityport.appspot.com',
-  messagingSenderId: '1059309145754',
-  appId: '1:1059309145754:web:0b750cebbca8ed34619923',
-  measurementId: 'G-D0Y3VL0NE5',
-};
-// firebase.initializeApp(firebaseConfig);
-// const db = firebase.firestore();
-
-// Renable this when I have a skeleton of denali up and running
-/*
-    db.collection("competitions").get().then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-            console.log("something3lse")
-            setCompetitions(old => ({...old, [doc.id]: doc.data()}))
-        });
-    })*/
-
-
-// https://react-table.tanstack.com/docs/overview
-
-function App() {
-  const [competitions, setCompetitions] = useState({});
+const App = () => {
   return (
-    <>
+    <FirebaseProvider>
       <DnNavbar>
         <DnNavbar.Left>
           <DnNavbar.Item>Left</DnNavbar.Item>
@@ -50,11 +21,9 @@ function App() {
           </DnNavbar.Right>
         </DnNavbar.Responsive>
       </DnNavbar>
-      <DnBox>
-            Hello
-      </DnBox>
-    </>
+      <CompetitionOverview/>
+    </FirebaseProvider>
   );
-}
+};
 
 export default App;
