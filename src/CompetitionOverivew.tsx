@@ -1,14 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {FirebaseContext} from './FirebaseProvider';
-// Renable this when I have a skeleton of denali up and running
-/*
-    db.collection("competitions").get().then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-            console.log("something3lse")
-            setCompetitions(old => ({...old, [doc.id]: doc.data()}))
-        });
-    })*/
-
 
 // https://react-table.tanstack.com/docs/overview
 
