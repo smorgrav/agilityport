@@ -13,7 +13,7 @@ You need the denali-react library (currently in beta and not publicly available)
 There are two ways:
 1. Use the VerizonMedia npm registry 
 ```
-npm set registry https://registry.npm.vzbuilders.com:4443/npm-registry
+npm config set @vzmi:registry https://registry.npm.vzbuilders.com:4443/npm-registry
 ```
 2. Use the VersionMedia internal repo: 
 ```

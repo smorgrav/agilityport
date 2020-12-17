@@ -10,13 +10,9 @@ const App = () => {
     <FirebaseProvider>
       <DnNavbar>
         <DnNavbar.Left>
-          <DnNavbar.Brand src="agilityportlogo.png"/>
-          <DnNavbar.Item>Agility Port</DnNavbar.Item>
+          <DnNavbar.Brand src="agilityportlogo.png" />
         </DnNavbar.Left>
         <DnNavbar.Responsive>
-          <DnNavbar.Center>
-            <DnNavbar.Item>Center</DnNavbar.Item>
-          </DnNavbar.Center>
           <DnNavbar.Right>
             <DnNavbar.Item>Right</DnNavbar.Item>
           </DnNavbar.Right>

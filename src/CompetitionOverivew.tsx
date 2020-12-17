@@ -1,7 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {FirebaseContext} from './FirebaseProvider';
-
-// https://react-table.tanstack.com/docs/overview
+import {CompetitionTable} from './CompetitionTable';
 
 const CompetitionOverview = ({})=> {
   const firebase = useContext(FirebaseContext);
@@ -19,10 +18,39 @@ const CompetitionOverview = ({})=> {
     }
   }, []);
 
+  const columns = React.useMemo(
+      () => [
+        {
+          Header: 'Competitions',
+          columns: [
+            {
+              Header: 'Name',
+              accessor: 'name',
+            },
+            {
+              Header: 'Source',
+              accessor: 'source',
+            },
+            {
+              Header: 'IDs',
+              accessor: 'sourceIds',
+            },
+            {
+              Header: 'From',
+              accessor: 'fromDate',
+            }, {
+              Header: 'To',
+              accessor: 'toDate',
+            },
+          ],
+        },
+      ],
+      [],
+  );
+
+  const data = React.useMemo(() => Object.values(comps), [comps]);
   return (
-    <>
-      {Object.entries(comps).map(([id, comp]) => (<h5 key={id}>{id}</h5>))}
-    </>
+    <CompetitionTable columns={columns} data={data}/>
   );
 };
 
